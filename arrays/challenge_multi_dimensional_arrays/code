@@ -1,0 +1,38 @@
+using System;
+
+namespace ConsoleApp
+{
+    public class Program
+    {
+        public static void PrintClassroomScores(int[,] scores)
+        {
+            int rows = scores.GetLength(0);
+            int cols = scores.GetLength(1);
+
+            for (int row = 0; row < rows; row++)
+            {
+                int rowTotal = 0;
+
+                for (int col = 0; col < cols; col++)
+                {
+                    rowTotal += scores[row, col];
+                }
+
+                Console.WriteLine("Total score for row " + (row + 1) + ": " + rowTotal);
+                Console.WriteLine(); // empty line for readability
+            }
+        }
+
+        public static void Main(string[] args)
+        {
+            int[,] classroomScores = 
+            {
+                { 85, 90, 78, 92 },
+                { 88, 76, 95, 80 },
+                { 91, 82, 87, 89 }
+            };
+
+            PrintClassroomScores(classroomScores);
+        }
+    }
+}
