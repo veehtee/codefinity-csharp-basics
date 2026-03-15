@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp
+{
+    public class Program
+    {
+        public static void CalculateTotalPrice()
+        {
+            double itemPrice = 99.99;
+            int quantity = 5;
+
+            double totalPrice = itemPrice * quantity;
+            Console.WriteLine("Total price: " + totalPrice);
+
+        }
+
+        public static void Main(string[] args)
+        {
+            CalculateTotalPrice();        
+        }
+    }
+}
