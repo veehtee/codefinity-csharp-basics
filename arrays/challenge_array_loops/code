@@ -1,0 +1,20 @@
+using System;
+
+namespace ConsoleApp {
+    public class Program {
+        public static double CalculateTotalSales(double[] sales) {
+            double sum = 0;
+            for (int i = 0; i < sales.Length; i++)
+            {
+                sum += sales[i];
+            }
+            return sum;
+        }
+        
+        public static void Main(string[] args) {
+            double[] sales = { 120.50, 99.99, 150.00, 200.00, 175.25 };
+            double total = CalculateTotalSales(sales);
+            Console.WriteLine(total);
+        }
+    }
+}
