@@ -1,0 +1,24 @@
+using System;
+
+namespace ConsoleApp
+{
+    public class Program
+    {
+        public static double CalculateFinalPrice(double itemPrice, int quantity, double discount)
+        {
+            double total = itemPrice * quantity;
+            double finalTotal = total - (total * discount / 100);
+            return finalTotal;
+        }
+
+        public static void Main(string[] args)
+        {
+            double price = 50.0;
+            int count = 4;
+            double discount = 10; // 10%
+
+            double finalPrice = CalculateFinalPrice(price, count, discount);
+            Console.WriteLine("Final price after discount: " + finalPrice);
+        }
+    }
+}
